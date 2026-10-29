@@ -17,20 +17,20 @@ elif bln in ["juli", "agustus"]:
 else:
     print("tidak tersedia ruangan di bulan ini")
 
-grand_total = 0
+total_biaya = 0
 
 if kamar == "studio":
-    grand_total = tarif_std * durasi
+    total_biaya = tarif_std * durasi
     if durasi > 3:
-        potongan = grand_total * 0.15
-        grand_total -= potongan
+        potongan = total_biaya * 0.15
+        total_biaya -= potongan
 elif kamar == "apartemen":
-    grand_total = tarif_apt * durasi
+    total_biaya = tarif_apt * durasi
     if durasi > 3:
-        potongan = grand_total * 0.10
-        grand_total -= potongan
+        potongan = total_biaya * 0.10
+        total_biaya -= potongan
 else:
     print("tipe kamar tidak valid")
 
-if grand_total > 0:
-    print(f"total tarif untuk menginap selama {durasi} hari dibulan {bln} dengan tipe kamar {kamar} adalah {grand_total}")
+if total_biaya > 0:
+    print(f"total tarif untuk menginap selama {durasi} hari dibulan {bln} dengan tipe kamar {kamar} adalah {total_biaya}")
